@@ -1,3 +1,10 @@
-env
+venv/
+.venv/
+__pycache__/
+*.pyc
+data/chroma_db/
+.git/
 .env
+env
 docs
+.dockerignore
