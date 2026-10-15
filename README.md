@@ -1,6 +1,6 @@
 # ☁️ Asistente Documental RAG - I Cloud Seven (Prueba Técnica)
 
-Este proyecto es un asistente documental basado en Inteligencia Artificial (RAG) diseñado para el rol de **AI Developer Engineer Junior** en I Cloud Seven. Permite a los usuarios cargar documentos (PDF, TXT, MD), indexarlos en una base de datos vectorial local, y realizar preguntas sobre su contenido obteniendo respuestas precisas y estrictamente limitadas a la información proporcionada.
+Este proyecto es un asistente documental basado en Inteligencia Artificial (RAG) diseñado para el rol de **AI Developer Engineer** en I Cloud Seven. Permite a los usuarios cargar documentos (PDF, TXT, MD), indexarlos en una base de datos vectorial local, y realizar preguntas sobre su contenido obteniendo respuestas precisas y estrictamente limitadas a la información proporcionada.
 
 ## 1. Descripción de la Solución
 
