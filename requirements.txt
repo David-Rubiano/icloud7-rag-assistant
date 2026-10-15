@@ -1,0 +1,4 @@
+pydantic_settings=2.16.0
+pydanctic=2.14.1
+pypdf=6.20.1
+boto3=1.43.114

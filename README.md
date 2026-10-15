@@ -2,6 +2,7 @@
 
 ## Estructura de proyecto:
 
+```text
 ic7-rag-assistant/
 ├── backend/
 │   ├── app/
@@ -49,3 +50,4 @@ ic7-rag-assistant/
 ├── docker-compose.yml
 ├── .env.example
 └── README.md                        # Entregable 4.5
+```
