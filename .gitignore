@@ -6,5 +6,4 @@ data/chroma_db/
 .git/
 .env
 env
-docs
 .dockerignore

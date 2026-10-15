@@ -1,11 +1,10 @@
-version: "3.9"
 
 services:
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: ic7-rag-backend
+    container_name: ic7-rag-assistant-backend
     ports:
       - "8000:8000"
     env_file:
@@ -18,7 +17,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: ic7-rag-frontend
+    container_name: ic7-rag-assistant-frontend
     ports:
       - "8501:8501"
     environment:

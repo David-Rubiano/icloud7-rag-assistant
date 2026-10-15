@@ -1,2 +1,0 @@
-Política Interna de Vacaciones y Permisos - IC7
-Todo colaborador con contrato a término indefinido tiene derecho a 15 días hábiles de vacaciones remuneradas por cada año completo de servicio. Las solicitudes deben registrarse en el portal de RRHH con al menos 15 días calendario de anticipación. El trabajo remoto desde el exterior está permitido hasta por un máximo de 20 días hábiles al año previa aprobación del líder técnico.
