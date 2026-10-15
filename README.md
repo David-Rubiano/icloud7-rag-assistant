@@ -25,9 +25,9 @@ ic7-rag-assistant/
 │   │   │   │   ├── s3_storage.py    # Sincronización Boto3 con fallback local
 │   │   │   │   └── local_storage.py
 │   │   │   ├── rag/
-│   │   │   │   ├── langchain_splitter.py
-│   │   │   │   ├── chroma_vector_store.py
-│   │   │   │   └── langchain_llm.py
+│   │   │   │   ├── langchain_splitter.py # Adaptador langchain_splitter
+│   │   │   │   ├── chroma_vector_store.py # Adaptador chroma_vector_store
+│   │   │   │   └── langchain_llm.py # langchain_llm
 │   │   │   └── parsers/
 │   │   │       └── file_parser.py   # Lectura de PDF, TXT y MD
 │   │   └── presentation/            # API REST con FastAPI
