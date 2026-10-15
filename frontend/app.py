@@ -7,8 +7,6 @@ BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
 st.set_page_config(page_title="Asistente Documental IC7", layout="wide")
 st.title("Asistente Documental RAG - I Cloud Seven")
 
-# ... (código anterior igual)
-
 # ==========================================
 # SIDEBAR: Subida e Indexación
 # ==========================================
@@ -65,8 +63,6 @@ with st.sidebar:
                 )
             else:
                 st.error(f"Error en la indexación: {resp.text}")
-
-# ... (El panel principal de Chat queda exactamente igual)
 
 # Panel Principal: Interfaz de Chat / Fuentes
 st.header("3. Interfaz de Consulta Documental")
