@@ -1,4 +1,3 @@
-import uuid
 from typing import List
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from app.domain.interfaces.text_splitter_port import TextSplitterPort
@@ -20,7 +19,8 @@ class LangChainSplitterAdapter(TextSplitterPort):
             for idx, text in enumerate(split_texts):
                 chunks.append(
                     DocumentChunk(
-                        chunk_id=f"{doc.filename}_chunk_{idx}_{uuid.uuid4().hex[:6]}",
+                        # Generación de ID determinista (sin UUID aleatorio)
+                        chunk_id=f"{doc.filename}_chunk_{idx}",
                         document_name=doc.filename,
                         content=text,
                         metadata={

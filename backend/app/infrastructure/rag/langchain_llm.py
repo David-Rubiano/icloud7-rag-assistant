@@ -1,6 +1,7 @@
 from typing import List
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser 
 from app.domain.interfaces.llm_port import LLMPort
 from app.domain.entities.document import SourceReference
 from app.infrastructure.config.settings import settings
@@ -13,7 +14,7 @@ class LangChainLLMAdapter(LLMPort):
         self.llm = ChatGoogleGenerativeAI(
             model=settings.GEMINI_MODEL,
             google_api_key=settings.GOOGLE_API_KEY,
-            temperature=0.0  # Temperatura 0 para respuestas deterministas y sin alucinaciones
+            temperature=0.0
         )
         self.prompt = ChatPromptTemplate.from_messages([
             ("system", (
@@ -30,6 +31,8 @@ class LangChainLLMAdapter(LLMPort):
             )),
             ("human", "{question}")
         ])
+        # Inicializamos el parser
+        self.output_parser = StrOutputParser()
 
     def generate_answer(self, question: str, context_chunks: List[SourceReference]) -> str:
         if not context_chunks:
@@ -38,6 +41,9 @@ class LangChainLLMAdapter(LLMPort):
         formatted_context = "\n\n---\n\n".join(
             [f"[Documento: {c.document_name}]\n{c.fragment_preview}" for c in context_chunks]
         )
-        chain = self.prompt | self.llm
-        response = chain.invoke({"context": formatted_context, "question": question})
-        return response.content
+        
+        # Agregamos el parser al final de la cadena usando el operador pipe (|)
+        chain = self.prompt | self.llm | self.output_parser
+        
+        # Ahora invoke() retornará garantizadamente un string puro
+        return chain.invoke({"context": formatted_context, "question": question})
