@@ -11,3 +11,4 @@ langchain-google-genai==4.4.2
 langchain-huggingface==1.2.3
 chromadb==1.5.9
 sentence-transformers==6.1.0
+fastapi==0.143.1
