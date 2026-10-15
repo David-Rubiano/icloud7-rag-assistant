@@ -1,5 +1,5 @@
 pydantic-settings==2.16.0
-pydanctic==2.14.1
+pydantic==2.14.1
 pypdf==6.20.1
 boto3==1.43.114
 langchain==1.4.6
@@ -12,3 +12,4 @@ langchain-huggingface==1.2.3
 chromadb==1.5.9
 sentence-transformers==6.1.0
 fastapi==0.143.1
+streamlit==1.66.0

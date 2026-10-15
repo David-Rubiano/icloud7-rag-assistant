@@ -1,0 +1,2 @@
+Manual de Onboarding Técnico - IC7
+Durante la primera semana, el desarrollador deberá configurar su entorno local con Python 3.11, Docker y acceso al repositorio corporativo en GitHub. El horario núcleo de sincronización diaria (Daily Standup) es a las 9:30 AM (hora Colombia). El soporte de TI atiende solicitudes de hardware únicamente a través del canal #it-helpdesk en Slack.
